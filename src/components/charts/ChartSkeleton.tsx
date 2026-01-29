@@ -1,8 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 
-const CHART_HEIGHT = 280;
-
 function ChartCard({ children }: { children: React.ReactNode }) {
   return (
     <Card className="h-full border-border/80 bg-card/50">
@@ -56,10 +54,7 @@ export function ChartSkeletonHorizontalBar() {
         {widths.map((w, i) => (
           <div key={i} className="flex items-center gap-2">
             <Skeleton className="h-4 w-16 shrink-0" />
-            <Skeleton
-              className="h-5 rounded-r-md"
-              style={{ width: `${w}%` }}
-            />
+            <Skeleton className="h-5 rounded-r-md" style={{ width: `${w}%` }} />
           </div>
         ))}
       </div>
